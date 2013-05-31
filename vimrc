@@ -27,6 +27,7 @@ Bundle 'tomtom/tlib_vim'
 " Snipmate
 Bundle 'garbas/vim-snipmate'
 Bundle 'mattn/zencoding-vim'
+Bundle 'pangloss/vim-javascript'
 
 " don't abandon buffer when unloaded
 set hidden
