@@ -1,17 +1,36 @@
 # if
 snippet if
-	if ${1} {
-		${2}
-	}${2}
+	if ${1:condition} {
+		${2:// body}
+	}
 
 # if ... else
 snippet ife
-	if ${1} {
-		${2}
+	if ${1:condition} {
+		${2:// body}
 	} else {
-		${3}
+		${3:// body}
 	}
 
 # fallthrough
 snippet ft
 	fallthrough
+
+# switch
+snippet sw
+	switch ${1:expression} {
+	case ${2:value}:
+		break;
+	}
+
+# function
+snippet f
+	func ${1:name}(${2}) ${3}{
+		${4:// body}
+	}
+
+# method
+snippet m
+	func (${1:receiver}) ${2:name}(${3}) ${4}{
+		${5:// body}
+	}
