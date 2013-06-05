@@ -28,6 +28,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'mattn/zencoding-vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'flazz/vim-colorschemes'
 
 " don't abandon buffer when unloaded
 set hidden
@@ -83,6 +84,12 @@ au FocusLost * silent! :wall
 " use , as leader char
 let mapleader=","
 
+" save file
+noremap <silent> <C-s> :update<cr>
+vnoremap <silent> <C-s> <C-C>:update<cr>
+inoremap <silent> <C-s> <C-o>:update<cr>
+" format json
+nnoremap <leader>j :%python -m json.tool
 " reload snippets
 nnoremap <leader>ss :call ReloadAllSnippets()<cr>
 " edit and reload vimrc
