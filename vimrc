@@ -28,7 +28,8 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'mattn/zencoding-vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'flazz/vim-colorschemes'
+Bundle 'groenewege/vim-less'
+Bundle 'chriskempson/base16-vim'
 
 " don't abandon buffer when unloaded
 set hidden
@@ -124,8 +125,9 @@ inoremap <C-j> <C-w>j
 inoremap <C-h> <C-w>h
 inoremap <C-l> <C-w>l
 
-" use desert colorscheme
-colorscheme desert
+" colorscheme
+set background=dark
+colorscheme base16-default
 
 " enable syntax highlighting
 syntax on
