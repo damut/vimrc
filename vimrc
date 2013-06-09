@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
+" Change pairs of surrounding characters
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-eunuch'
 " Needed for Snipmate
@@ -27,10 +28,21 @@ Bundle 'tomtom/tlib_vim'
 " Snipmate
 Bundle 'garbas/vim-snipmate'
 Bundle 'mattn/zencoding-vim'
+" Better javascript handling
 Bundle 'pangloss/vim-javascript'
+" Less syntax
 Bundle 'groenewege/vim-less'
+" Sass syntax
+Bundle 'tpope/vim-haml'
+" nice color scheme
 Bundle 'chriskempson/base16-vim'
+" making surround package also work with the . command
+Bundle 'tpope/vim-repeat'
+" Syntax for Powershell scripts
+Bundle 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
 
+" automatically reload changed files
+set autoread
 " don't abandon buffer when unloaded
 set hidden
 " no compatibility for vi
@@ -38,11 +50,11 @@ set nocompatible
 " use 256 colors in putty
 set t_Co=256
 " 4 spaces for tab
-set tabstop=4
+set tabstop=2
 " also use 4 spaces for reindentation (<< and >>)
-set shiftwidth=4
+set shiftwidth=2
 " use 4 spaces when pressing <tab>
-set softtabstop=4
+set softtabstop=2
 " use spaces instead of tab chars for indentation
 set expandtab
 " use utf-8 encoding
@@ -134,3 +146,5 @@ syntax on
 filetype plugin on
 " needed for vundle
 filetype plugin indent on
+
+autocmd Filetype go setlocal ts=4 sts=4 sw=4
