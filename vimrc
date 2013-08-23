@@ -40,6 +40,10 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'tpope/vim-repeat'
 " Syntax for Powershell scripts
 Bundle 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
+" Todo plugin
+Bundle 'aaronbieber/quicktask'
+" Coloooorschemes
+Bundle 'flazz/vim-colorschemes'
 
 " automatically reload changed files
 set autoread
@@ -138,8 +142,9 @@ inoremap <C-h> <C-w>h
 inoremap <C-l> <C-w>l
 
 " colorscheme
-set background=dark
-colorscheme base16-default
+"set background=dark
+"colorscheme base16-default
+colorscheme jellybeans
 
 " enable syntax highlighting
 syntax on
@@ -148,3 +153,5 @@ filetype plugin on
 filetype plugin indent on
 
 autocmd Filetype go setlocal ts=4 sts=4 sw=4
+autocmd Filetype snippets setlocal noexpandtab ts=4 sts=4 sw=4
+autocmd Filetype quicktask setlocal nospell
